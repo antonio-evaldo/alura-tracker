@@ -26,10 +26,22 @@
   - Aprendemos que podemos construir um objeto `Date` passando em seu construtor a quantidade de microsegundos decorridos. Depois, fatiamos a string para pegarmos somente as horas, minutos e segundos.
 
 - Emitir eventos customizados;
-  - Aprendemos a utilizar o $emit para criar eventos utilizados na comunicação entre componentes.
+  - Aprendemos a utilizar o [`$emit`](https://v3.vuejs.org/guide/component-custom-events.html) para criar eventos utilizados na comunicação entre componentes.
 
 - Ouvir eventos customizados.
   - Aprendemos que ouvir eventos customizados é tão simples quanto ouvir eventos HTML, como o `click` por exemplo.
+
+
+## Módulo 3
+
+- Renderizar listas com o `v-for`;
+  - Utilizamos um mecanismo de repetição para renderizar N vezes uma tarefa, onde N é o tamanho da lista. Isso faz com que nossa lista seja dinâmica.
+- Condicionais com `v-if` / `v-else`;
+  - Aprendemos como esconder ou exibir um componente, dado um estado específico utilizando a diretiva `v-if`.
+- Fallback de conteúdo com o operador `||` (OU);
+  - Utilizamos o operador OU para exibir um texto padrão, caso a tarefa não possua uma descrição.
+- Slots.
+  - Aprendemos a lidar com o slot quando criamos um componente para representar o Box. Assim, conseguimos exibir os elementos filhos dentro do nosso Box.
 
 # alura-tracker
 
