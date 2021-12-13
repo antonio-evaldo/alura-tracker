@@ -10,33 +10,12 @@
           type="text"
           class="input"
           placeholder="Qual tarefa você deseja iniciar?"
+          v-model="descricao"
         />
       </div>
 
       <div class="column">
-        <div
-          class="is-flex is-align-items-center is-justify-content-space-between"
-        >
-          <section>
-            <strong>
-              {{ tempoDecorrido }}
-            </strong>
-          </section>
-
-          <button class="button" @click="iniciar">
-            <span class="icon">
-              <i class="fas fa-play"></i>
-            </span>
-            <span>play</span>
-          </button>
-
-          <button class="button" @click="finalizar">
-            <span class="icon">
-              <i class="fas fa-stop"></i>
-            </span>
-            <span>stop</span>
-          </button>
-        </div>
+        <Temporizador @aoFinalizarTemporizador="finalizarTarefa" />
       </div>
     </div>
   </div>
@@ -44,37 +23,24 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Temporizador from "./Temporizador.vue";
 
 export default defineComponent({
   name: "Formulario",
+  components: { Temporizador },
 
   data() {
     return {
-      tempoEmSegundos: 0,
-      cronometroID: 0,
-      tarefas: [],
-    };
-  },
-
-  computed: {
-    tempoDecorrido(): string {
-      return new Date(this.tempoEmSegundos * 1000).toISOString().substr(11, 8);
-    },
+      descricao: ''
+    }
   },
 
   methods: {
-    iniciar() {
-      if (this.cronometroID === 0) {
-        this.cronometroID = setInterval(() => {
-          this.tempoEmSegundos++;
-        }, 1000);
-      }
-    },
-    finalizar() {
-      clearInterval(this.cronometroID);
+    finalizarTarefa(tempoDecorrido: number): void {
+      console.log('tempo da tarefa: ' + tempoDecorrido);
+      console.log('descrição da tarefa: ' + this.descricao);
 
-      this.tempoEmSegundos = 0;
-      this.cronometroID = 0;
+      this.descricao = '';
     },
   },
 });
