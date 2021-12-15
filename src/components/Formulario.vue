@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box formulario">
     <div class="columns">
       <div
         class="column is-8"
@@ -22,35 +22,39 @@
 </template>
 
 <script lang="ts">
-import ITarefa from '@/interfaces/ITarefa';
+import ITarefa from "@/interfaces/ITarefa";
 import { defineComponent } from "vue";
 import Temporizador from "./Temporizador.vue";
 
 export default defineComponent({
   name: "Formulario",
   components: { Temporizador },
-  emits: ['aoFinalizarTarefa'],
+  emits: ["aoFinalizarTarefa"],
 
   data() {
     return {
-      descricao: ''
-    }
+      descricao: "",
+    };
   },
 
   methods: {
     finalizarTarefa(tempoDecorrido: number): void {
       const tarefa = {
         duracaoEmSegundos: tempoDecorrido,
-        descricao: this.descricao
+        descricao: this.descricao,
       } as ITarefa;
 
-      this.$emit('aoFinalizarTarefa', tarefa);
+      this.$emit("aoFinalizarTarefa", tarefa);
 
-      this.descricao = '';
+      this.descricao = "";
     },
   },
 });
 </script>
 
-<style scoped>
+<style>
+.formulario {
+  color: var(--texto-primario);
+  background-color: var(--bg-primario);
+}
 </style>

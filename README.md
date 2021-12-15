@@ -43,6 +43,15 @@
 - Slots.
   - Aprendemos a lidar com o slot quando criamos um componente para representar o Box. Assim, conseguimos exibir os elementos filhos dentro do nosso Box.
 
+## Módulo 4
+
+- Uso de variáveis CSS para temas (claro/escuro);
+  - Utilizando essas variáveis, nós podemos facilmente controlar o tema do nosso Alura Tracker, alterando a cor de fundo e a cor do texto de acordo com o tema aplicado.
+- Adicionar e remover classes baseado num estado do componente;
+  - Aprendemos a adicionar ou remover classes, condicionalmente utilizando a diretiva `:class`.
+- Estilos via objetos.
+  - Aprendemos uma nova forma de aplicar estilos a um elemento, utilizando um objeto que representa as propriedades e seus valores.
+
 # alura-tracker
 
 ## Project setup
