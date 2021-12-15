@@ -52,6 +52,15 @@
 - Estilos via objetos.
   - Aprendemos uma nova forma de aplicar estilos a um elemento, utilizando um objeto que representa as propriedades e seus valores.
 
+## Módulo 5
+
+- Depurar a aplicação usando o Vue Devtools;
+  - Aprendemos a visualizar o estado de cada componente, o que nos ajuda a entender como as coisas estão funcionando - por baixo dos panos.
+- Gerar um build manual da aplicação;
+  - Aprendemos a rodar o script que faz a construção da nossa aplicação, assim podemos publicar manualmente em algum - servidor web caso seja necessário.
+- Publicar a aplicação no Versel;
+  - Aprendemos a configurar o Vercel para integrar com o nosso github e publicar nossa aplicação de forma contínua!
+
 # alura-tracker
 
 ## Project setup
